@@ -1,13 +1,12 @@
-/*
-    Prefix.less
-    Copyright (c) 2012 Ramón Lamana
 
-    MIT Licensed:
-    http://www.opensource.org/licenses/mit-license.php
-*/
+//  Prefix.less 
+//  Copyright (c) 2012 Ramón Lamana
+//
+//  MIT Licensed:
+//  http://www.opensource.org/licenses/mit-license.php
 
 
-/* User Select */
+// User Select
 
 .user-select(@value) {
   user-select: @value;
@@ -42,7 +41,7 @@
 }
 
 
-/* Transforms */
+// Transforms
 
 .transform(...) {
     @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
@@ -76,7 +75,7 @@
 }
 
 
-/* Box Shadows */
+// Box Shadows
 
 .box-shadow(@value) {
   -webkit-box-shadow: @value;
@@ -86,7 +85,7 @@
   box-shadow: @value;
 }
 
-/* Border Radius */
+// Border Radius
 
 .border-radius(@args) {
     -webkit-border-radius: @args;
@@ -99,7 +98,7 @@
 }
 
 
-/* Gradients */
+// Gradients
 
 .gradient(@default: #F5F5F5, @start: #EEE, @stop: #FFF) {
     .linear-gradient-top(@default,@start,0%,@stop,100%);
