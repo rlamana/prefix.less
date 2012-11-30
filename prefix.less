@@ -33,8 +33,8 @@
 
 // Transition
 
-.transition(...) {
-    @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+..transition(@val1, @val2:X, ...) {
+    @args: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transition: @args;
     -moz-transition: @args;
     -ms-transition: @args; 
@@ -43,7 +43,7 @@
 }
 
 .transition-property(...) {
-    @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+    @args: ~`'@{arguments}'.replace(/\[|\]/g, '')`;
     -webkit-transition-property: @args;
     -moz-transition-property: @args;
     -ms-transition-property: @args; 
@@ -54,8 +54,8 @@
 
 // Transforms
 
-.transform(...) {
-    @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+.transform(@val1, @val2:X, ...) {
+    @args: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transform: @args; 
     -moz-transform: @args; 
     -ms-transform: @args; 
