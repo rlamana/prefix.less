@@ -33,7 +33,7 @@
 
 // Transition
 
-..transition(@val1, @val2:X, ...) {
+.transition(@val1, @val2:X, ...) {
     @args: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transition: @args;
     -moz-transition: @args;
