@@ -1,38 +1,55 @@
-  
-  @import "prefix.less";
 
-  html {
-    font-family: "Open Sans", sans-serif;
-    font-size: 12pt;
-    font-weight: 200;
-  }
+    @import "prefix.less";
 
-  h2 {
-    font-weight: 200;
-    margin-left: -10px;
-  }
-
-  h3 {
-    font-size: .9em;
-    font-weight: 200;
-    color: #00bb00;
-  }
-
-  p {
-    padding: 0 20px 15px 0px;
-  }
-
-  section {
-    padding-left: 20px;
-  }
-
-  #test-transforms {
-
-  }
-
-  #test-user-select {
-    .test1 {
-      .user-select(none);
-      cursor: default;
+    html {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12pt;
+        font-weight: 200;
     }
-  }
+
+    body {
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        font-weight: 200;
+        margin-left: -10px;
+    }
+
+    h3 {
+        font-size: .9em;
+        font-weight: 200;
+        color: #00bb00;
+    }
+
+    p {
+        padding: 0 20px 15px 0px;
+    }
+
+    section {
+        padding: 0 20px;
+    }
+
+    #test-transforms {
+
+    }
+
+    #test-user-select {
+        .test1 {
+            .user-select(none);
+             cursor: default;
+        }
+    }
+
+    #test-gradients {
+        .gradient {
+            height: 100px;
+        }
+
+        .test1 {
+            .gradient {
+                /*background-image: .linear-gradient(left top blue white);*/
+                background-color: blue;
+            }
+        }
+    }
