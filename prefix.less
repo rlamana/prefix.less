@@ -74,14 +74,36 @@
   box-shadow: @value;
 }
 
+
 // Border Radius
 
 .border-radius(@args) {
     -webkit-border-radius: @args;
     -moz-border-radius: @args;
+    -ms-border-radius: @args;
+    -o-border-radius: @args;
     border-radius: @args;
 
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
+
+// Gradients
+
+.gradient(@value) {
+    -webkit-gradient: @value; 
+    -moz-gradient: @value; 
+    -ms-gradient: @value; 
+    -o-gradient: @value; 
+    gradient: @value;
+}
+
+.linear-gradient(@value) {
+    -webkit-linear-gradient: @value; 
+    -moz-linear-gradient: @value; 
+    -ms-linear-gradient: @value; 
+    -o-linear-gradient: @value; 
+    linear-gradient: @value;
+}
+
