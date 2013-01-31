@@ -148,3 +148,19 @@
   align-self: @values;
 }
 
+// 'justify-content' property
+
+.justify-content(@values) {
+  // Old 2009 specs
+  -webkit-box-pack: @values;
+  -moz-box-pack: @values;
+  -ms-box-pack: @values;
+  -o-box-pack: @values;
+
+  // New 2012 specs
+  -webkit-justify-content: @values;
+  -moz-justify-content: @values;
+  -ms-justify-content: @values;
+  -o-justify-content: @values;
+  justify-content: @values;
+}
