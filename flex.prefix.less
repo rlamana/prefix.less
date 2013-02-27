@@ -26,13 +26,11 @@
   display: -o-box;
 
   // New specs
-  // @todo Once browsers start suporting correctly the new specs
-  //  this should be used
-  /*display: -webkit-flex;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
-  display: flex;*/
+  display: flex;
 }
 
 // 'flex-flow' property
@@ -169,6 +167,12 @@
 }
 
 .justify-content(@value) {
+  // Old 2009 specs
+  -webkit-box-pack: @value;
+  -moz-box-pack: @value;
+  -ms-box-pack: @value;
+  -o-box-pack: @value;
+
   // New 2012 specs
   -webkit-justify-content: @value;
   -moz-justify-content: @value;
