@@ -1,0 +1,170 @@
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title>flex.prefix.less module test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<style type="text/css">
+		body {
+			padding-top: 20px;
+			padding-bottom: 40px;
+		}
+
+		body > .container {
+			background: none;
+		}
+
+		.config-container {
+			font-size: .8em;
+		}
+
+		.config-container .btn {
+			font-size: 12px;
+			padding: 1px 12px;
+		}
+
+		.config-container .form-inline {
+			padding: 0;
+			margin: 0;
+		}
+
+		.config-container .form-inline input {
+			padding: 0 3px;
+			font-size: 10px;
+		}
+	</style>
+  </head>
+
+  <body>
+  	<div class="container">
+		<h2>flex.prefix.less</h2>
+		<p>Test how flex box model and prefix.less works on your browser.</p>
+
+		<div class="config-container config-flex-container well well-small">
+			<div class="row-fluid">
+				<div class="span2 text-right">display:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">flex</button>
+						<button class="btn">inline-flex</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">flex-direction:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">row</button>
+						<button class="btn">column</button>
+						<button class="btn">row-reverse</button>
+						<button class="btn">column-reverse</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">flex-wrap:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">nowrap</button>
+						<button class="btn">wrap</button>
+						<button class="btn">wrap-reverse</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">align-items:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">flex-start</button>
+						<button class="btn">flex-end</button>
+						<button class="btn">center</button>
+						<button class="btn">baseline</button>
+						<button class="btn">stretch</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">justify-content:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">flex-start</button>
+						<button class="btn">flex-end</button>
+						<button class="btn">center</button>
+						<button class="btn">space-between</button>
+						<button class="btn">space-around</button>
+					</div>
+				</div>
+			</div>
+		
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">align-content:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">flex-start</button>
+						<button class="btn">flex-end</button>
+						<button class="btn">center</button>
+						<button class="btn">space-between</button>
+						<button class="btn">space-around</button>
+						<button class="btn">stretch</button>
+					</div>
+				</div>
+			</div>
+
+		</div><!-- flex-config-container-->
+
+		<div class="config-container config-item-container well well-small">
+			<div class="row-fluid">
+				<div class="span2 text-right">order:</div>
+				<div class="span6">
+					<form class="form-inline">
+						<input type="text" placeholder="order" value='0' class="text-center" style="width: 10px">
+					</form>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right">flex:</div>
+				<div class="span6">
+					<form class="form-inline">
+						<input type="text" placeholder="order" value='1' class="text-center" style="width: 10px">
+						<input type="text" placeholder="order" value='0' class="text-center" style="width: 10px">
+						<input type="text" placeholder="order" value='auto' class="text-center" style="width: 25px">
+					</form>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2 text-right small">align-self:</div>
+				<div class="span6">
+					<div class="btn-group">
+						<button class="btn active">flex-start</button>
+						<button class="btn">flex-end</button>
+						<button class="btn">center</button>
+						<button class="btn">baseline</button>
+						<button class="btn">stretch</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- flex-config-container-->
+
+		<div class="footer">
+			<p>&copy; rlamana 2013</p>
+		</div>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
