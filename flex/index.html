@@ -53,7 +53,7 @@
 
   <body>
   	<div class="container">
-		<h2>flex.prefix.less</h2>
+		<!--h2>flex.prefix.less</h2>-->
 		<p>Test how flex box model and prefix.less work on your browser.</p>
 
 		<div id="configurator">
@@ -145,41 +145,43 @@
 	</div>
 
 	<script type="text/html" id="item-template">
-		<div class="config-container config-flex-item well well-small">
-			<div class="row-fluid">
-				<div class="span2 text-right">order:</div>
-				<div class="span6">
-					<form class="form-inline">
-						<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
-					</form>
-				</div>
-			</div>
-
-			<div class="row-fluid">
-				<div class="span2 text-right">flex:</div>
-				<div class="span6">
-					<form class="form-inline" data-property="flex">
-						<input type="text" placeholder="order" value="1" class="text-center" style="width: 10px">
-						<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
-						<input type="text" placeholder="order" value="auto" class="text-center" style="width: 25px">
-					</form>
-				</div>
-			</div>
-
-			<div class="row-fluid">
-				<div class="span2 text-right small">align-self:</div>
-				<div class="span6">
-					<div class="btn-group btn-item-property" data-toggle="buttons-radio" data-property="align-self">
-						<button class="btn active">flex-start</button>
-						<button class="btn">flex-end</button>
-						<button class="btn">center</button>
-						<button class="btn">baseline</button>
-						<button class="btn">stretch</button>
+		<div class="config-flex-item">
+			<div class="config-container well well-small">
+				<div class="row-fluid">
+					<div class="span2 text-right">order:</div>
+					<div class="span6">
+						<form class="form-inline">
+							<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
+						</form>
 					</div>
 				</div>
-			</div>
 
-			<button class="btn btn-danger button-remove-item"><i class="icon-minus icon-white"></i>Remove item</button>
+				<div class="row-fluid">
+					<div class="span2 text-right">flex:</div>
+					<div class="span6">
+						<form class="form-inline" data-property="flex">
+							<input type="text" placeholder="order" value="1" class="text-center" style="width: 10px">
+							<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
+							<input type="text" placeholder="order" value="auto" class="text-center" style="width: 25px">
+						</form>
+					</div>
+				</div>
+
+				<div class="row-fluid">
+					<div class="span2 text-right small">align-self:</div>
+					<div class="span6">
+						<div class="btn-group btn-item-property" data-toggle="buttons-radio" data-property="align-self">
+							<button class="btn active">flex-start</button>
+							<button class="btn">flex-end</button>
+							<button class="btn">center</button>
+							<button class="btn">baseline</button>
+							<button class="btn">stretch</button>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn btn-danger button-remove-item"><i class="icon-minus icon-white"></i>Remove item</button>
+			</div>
 		</div>
 	</script>
 
@@ -193,7 +195,7 @@
 				properties: {}
 			};
 
-			var itemTemplate = _.template($('#item-template').html());
+			var itemTemplate = ;
 
 			function getProperty($buttongrp) {
 				var name = $buttongrp.data('property');
@@ -206,6 +208,12 @@
 
 			$('.button-add-item').click(function() {
 				$("#configurator").append(itemTemplate());
+			});
+
+			$('#configurator').delegate('.config-flex-item .button-remove-item', 'click', function() {
+				$(this).parents('.config-flex-item').slideUp(function(){
+					$(this).remove();
+				});
 			});
 
 			// First time get default values
