@@ -37,6 +37,17 @@
 			padding: 0 3px;
 			font-size: 10px;
 		}
+
+
+		.config-flex-item {
+			position: relative;
+		}
+
+		.config-flex-item .button-remove-item {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
 	</style>
   </head>
 
@@ -45,89 +56,101 @@
 		<h2>flex.prefix.less</h2>
 		<p>Test how flex box model and prefix.less work on your browser.</p>
 
-		<div class="config-container config-flex-container well well-small">
-			<div class="row-fluid">
-				<div class="span2 text-right">display:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="display">
-						<button class="btn active">flex</button>
-						<button class="btn">inline-flex</button>
+		<div id="configurator">
+			<div class="config-container config-flex-container well well-small">
+				<div class="row-fluid">
+					<div class="span2 text-right">display:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="display">
+							<button class="btn active">flex</button>
+							<button class="btn">inline-flex</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row-fluid">
-				<div class="span2 text-right small">flex-direction:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="flex-direction">
-						<button class="btn active">row</button>
-						<button class="btn">column</button>
-						<button class="btn">row-reverse</button>
-						<button class="btn">column-reverse</button>
+				<div class="row-fluid">
+					<div class="span2 text-right small">flex-direction:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="flex-direction">
+							<button class="btn active">row</button>
+							<button class="btn">column</button>
+							<button class="btn">row-reverse</button>
+							<button class="btn">column-reverse</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row-fluid">
-				<div class="span2 text-right small">flex-wrap:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="flex-wrap">
-						<button class="btn active">nowrap</button>
-						<button class="btn">wrap</button>
-						<button class="btn">wrap-reverse</button>
+				<div class="row-fluid">
+					<div class="span2 text-right small">flex-wrap:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="flex-wrap">
+							<button class="btn active">nowrap</button>
+							<button class="btn">wrap</button>
+							<button class="btn">wrap-reverse</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row-fluid">
-				<div class="span2 text-right small">align-items:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="align-items">
-						<button class="btn active">flex-start</button>
-						<button class="btn">flex-end</button>
-						<button class="btn">center</button>
-						<button class="btn">baseline</button>
-						<button class="btn">stretch</button>
+				<div class="row-fluid">
+					<div class="span2 text-right small">align-items:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="align-items">
+							<button class="btn active">flex-start</button>
+							<button class="btn">flex-end</button>
+							<button class="btn">center</button>
+							<button class="btn">baseline</button>
+							<button class="btn">stretch</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row-fluid">
-				<div class="span2 text-right small">justify-content:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="justify-content">
-						<button class="btn active">flex-start</button>
-						<button class="btn">flex-end</button>
-						<button class="btn">center</button>
-						<button class="btn">space-between</button>
-						<button class="btn">space-around</button>
+				<div class="row-fluid">
+					<div class="span2 text-right small">justify-content:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="justify-content">
+							<button class="btn active">flex-start</button>
+							<button class="btn">flex-end</button>
+							<button class="btn">center</button>
+							<button class="btn">space-between</button>
+							<button class="btn">space-around</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<div class="row-fluid">
-				<div class="span2 text-right small">align-content:</div>
-				<div class="span6">
-					<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="align-content">
-						<button class="btn active">flex-start</button>
-						<button class="btn">flex-end</button>
-						<button class="btn">center</button>
-						<button class="btn">space-between</button>
-						<button class="btn">space-around</button>
-						<button class="btn">stretch</button>
+				<div class="row-fluid">
+					<div class="span2 text-right small">align-content:</div>
+					<div class="span6">
+						<div class="btn-group btn-property" data-toggle="buttons-radio" data-property="align-content">
+							<button class="btn active">flex-start</button>
+							<button class="btn">flex-end</button>
+							<button class="btn">center</button>
+							<button class="btn">space-between</button>
+							<button class="btn">space-around</button>
+							<button class="btn">stretch</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-		</div><!-- flex-config-container-->
+			</div><!-- config-flex-container-->
 
-		<div class="config-container config-item-container well well-small">
+		</div><!-- Configurator -->
+
+		<button class="btn btn-primary button-add-item"><i class="icon-plus icon-white"></i>Add item</button>
+
+		<div class="footer">
+			<!--<p>&copy; rlamana 2013</p>-->
+		</div>
+
+	</div>
+
+	<script type="text/html" id="item-template">
+		<div class="config-container config-flex-item well well-small">
 			<div class="row-fluid">
 				<div class="span2 text-right">order:</div>
 				<div class="span6">
 					<form class="form-inline">
-						<input type="text" placeholder="order" value='0' class="text-center" style="width: 10px">
+						<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
 					</form>
 				</div>
 			</div>
@@ -136,9 +159,9 @@
 				<div class="span2 text-right">flex:</div>
 				<div class="span6">
 					<form class="form-inline" data-property="flex">
-						<input type="text" placeholder="order" value='1' class="text-center" style="width: 10px">
-						<input type="text" placeholder="order" value='0' class="text-center" style="width: 10px">
-						<input type="text" placeholder="order" value='auto' class="text-center" style="width: 25px">
+						<input type="text" placeholder="order" value="1" class="text-center" style="width: 10px">
+						<input type="text" placeholder="order" value="0" class="text-center" style="width: 10px">
+						<input type="text" placeholder="order" value="auto" class="text-center" style="width: 25px">
 					</form>
 				</div>
 			</div>
@@ -155,13 +178,10 @@
 					</div>
 				</div>
 			</div>
-		</div><!-- flex-config-container-->
 
-		<div class="footer">
-			<!--<p>&copy; rlamana 2013</p>-->
+			<button class="btn btn-danger button-remove-item"><i class="icon-minus icon-white"></i>Remove item</button>
 		</div>
-
-	</div>
+	</script>
 
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -173,6 +193,8 @@
 				properties: {}
 			};
 
+			var itemTemplate = _.template($('#item-template').html());
+
 			function getProperty($buttongrp) {
 				var name = $buttongrp.data('property');
 				var value = $buttongrp.find('.active').html();
@@ -181,6 +203,10 @@
 				ret[name] = value;
 				return ret;
 			}
+
+			$('.button-add-item').click(function() {
+				$("#configurator").append(itemTemplate());
+			});
 
 			// First time get default values
 			$('.btn-property .btn.active').each(function() {
