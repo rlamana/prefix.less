@@ -63,11 +63,11 @@
 // 'flex-direction' property
 
 .flex-direction(@value) {
-  -webkit-flex-flow: @value;
-  -moz-flex-flow: @value;
-  -ms-flex-flow: @value;
-  -o-flex-flow: @value;
-  flex-flow: @value;
+  -webkit-flex-direction: @value;
+  -moz-flex-direction: @value;
+  -ms-flex-direction: @value;
+  -o-flex-direction: @value;
+  flex-direction: @value;
 }
 
 .flex-direction(@value) when (@value = column) {
@@ -85,7 +85,6 @@
   -ms-box-orient: horizontal;
   -o-box-orient: horizontal;
 }
-
 
 // 'flex-wrap' property
 
@@ -148,35 +147,3 @@
   align-self: @values;
 }
 
-// 'justify-content' property
-
-.justify-content(@value) when (@value = flex-end) {
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  -ms-box-pack: end;
-  -o-box-pack: end;
-  box-pack: end;
-}
-
-.justify-content(@value) when (@value = flex-start) {
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  -ms-box-pack: start;
-  -o-box-pack: start;
-  box-pack: start;
-}
-
-.justify-content(@value) {
-  // Old 2009 specs
-  -webkit-box-pack: @value;
-  -moz-box-pack: @value;
-  -ms-box-pack: @value;
-  -o-box-pack: @value;
-
-  // New 2012 specs
-  -webkit-justify-content: @value;
-  -moz-justify-content: @value;
-  -ms-justify-content: @value;
-  -o-justify-content: @value;
-  justify-content: @value;
-}
